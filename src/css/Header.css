@@ -1,0 +1,193 @@
+.header {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #fffafa;
+    transition: all 0.7s ease-in-out;
+    background: #fffafae7;
+}
+.logo {
+    /* max-width: 200px; */
+    color: #005ec4;
+    font-size: 26px;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+
+.header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-btn{
+    display: none;
+}
+nav {
+    max-width: 400px;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav-link-item {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    transition: all 0.5s ease-in-out;
+    color: #000000;
+}
+.nav-link-item:hover {
+    color: #005ec4;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+.btn-wrapper {
+    display: flex; 
+    gap: 10px;
+}
+@media screen and (max-width: 1280px) {
+    .logo {
+        font-size: 22px;
+    }
+    nav {
+        max-width: 360px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .logo {
+        font-size: 18px;
+    }
+    .nav-link-item {
+        font-size: 16px;
+    }
+    nav {
+        max-width: 320px;
+    }
+    nav ul {
+        align-items: center;
+    }
+    nav .dropdown-icon {
+        font-size: 16px;
+        padding: 15px 0px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .btn-wrapper.dmb {
+        display: none;
+    }
+    .header {
+        padding: 25px 0;
+        background: #fff;
+    }
+    nav {
+        position: fixed;
+        top: 68px;
+        right: -100%;
+        width: 100%;
+        max-width: unset;
+        height: calc(100vh - 68px);
+        background: #fff;
+        text-align: left;
+        transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 0 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    .header ul li .nav-link-item {
+        padding: 15px 30px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+    .header.top ul li .nav-link-item {
+        padding: 15px 30px;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+    .get-started-btn {
+        display: block !important;
+        width: 85%;
+        font-size: 16px;
+        padding: 15px 30px;
+        text-align: center;
+        margin: 0 auto 40px;
+    }
+    .toggle-btn {
+        position: relative;
+        width: 31px;
+        height: 3px;
+        background: #005ec4;
+        flex-shrink: 0;
+        display: block;
+    }
+    .toggle-btn::before,
+    .toggle-btn::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        display: block;
+        background: #005ec4;
+        left: 0;
+        right: 0;
+        transition: all 0.3s;
+    }
+    .toggle-btn::before {
+        bottom: 8px;
+    }
+    .toggle-btn::after {
+        top: 8px;
+    }
+    .toggle-open {
+        background: transparent;
+    }
+    .toggle-open::before,
+    .toggle-open::after {
+        content: "";
+        background: #005ec4;
+        display: block;
+        position: absolute;
+        top: -4px;
+        transition: all 0.3s;
+    }
+    .toggle-open::before {
+        transform: rotate(-45deg);
+    }
+    .toggle-open::after {
+        transform: rotate(45deg);
+    }
+    .nav-show {
+        right: 0;
+        transition: all 0.5s;
+    }
+    .header .dropdown {
+        width: 100%;
+        display: block;
+    }
+    .header .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+    .header .dropdown-menu .dropdown-link-item  {
+        padding: 10px 30px;
+    }
+}

@@ -1,0 +1,8 @@
+.input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-prefix {
+    margin-right: 5px;
+  }
