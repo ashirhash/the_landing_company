@@ -12,6 +12,7 @@ html {
   color: #ffffff; 
 }
 body {
+  -webkit-text-size-adjust: none;
   font-family: 'Roboto';
   font-size: 16px; 
   color: #2b3a67;
